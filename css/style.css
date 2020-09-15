@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 16px;
+    font-family: 'lato', sans-serif;
+    color: #777;
+    line-height: 1.7;
+}
+.header{
+    height: 95vh;
+    background:linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 33, 0.8)),url('../img/pantai.jpg') no-repeat top /cover;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
+}
+.logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.logo{
+    height: 5em;
+    width:  5em;
+}
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.main-header{
+    text-transform: uppercase;
+    color: #ffff;
+    margin-bottom: 40px;
+
+}
+.main-header-title{
+    font-size: 60px;
+    display: block;
+    font-weight: 400;
+    letter-spacing: 30px;
+    animation-name: Gerakkekanan;
+    animation-duration: 2s;
+}
+.main-header-sub{
+    font-size: 20px;
+    display: block;
+    font-weight: 400;
+    letter-spacing: 16.5px;
+    animation-name: Gerakkekiri;
+    animation-duration: 2s;
+}
+.btn{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 19px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: 0.2s all;
+    position: relative;
+    z-index: 1;
+    animation-name: Gerakkeatas;
+    animation-duration: 2s;
+}
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.3);
+}
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.3);
+}
+.btn::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    z-index: -1;
+    transition: 0.2s all;
+    opacity: 1;
+}
+.btn:hover::after{
+    transform: scale(1.4,1.7);
+    opacity: 0;
+}
+.btn-white::after{
+    background: #fff;
+}
+.btn-white{
+    background: #fff;
+    color: #777;
+
+}
+
+@keyframes Gerakkekanan{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes Gerakkekiri{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes Gerakkeatas{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
