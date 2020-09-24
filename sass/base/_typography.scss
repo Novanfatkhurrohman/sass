@@ -1,0 +1,33 @@
+
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 16px;
+    font-family: 'lato', sans-serif;
+    color: #777;
+    line-height: 1.7;
+}
+
+.main-header{
+    text-transform: uppercase;
+    color: #ffff;
+    margin-bottom: 40px;
+
+}
+.main-header-title{
+    font-size: 60px;
+    display: block;
+    font-weight: 400;
+    letter-spacing: 30px;
+    animation-name: Gerakkekanan;
+    animation-duration: 2s;
+}
+.main-header-sub{
+    font-size: 20px;
+    display: block;
+    font-weight: 400;
+    letter-spacing: 16.5px;
+    animation-name: Gerakkekiri;
+    animation-duration: 2s;
+}
